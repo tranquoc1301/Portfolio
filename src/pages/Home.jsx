@@ -1,9 +1,13 @@
+import { StarBackground } from "@components/StarBackground";
+import { ThemeToggle } from "@components/ThemeToggle";
+
 export const Home = () => {
   return (
-    <div className="flex items-center justify-center h-screen">
-      <h1 className="text-4xl font-bold">Welcome to My Portfolio</h1>
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Theme toggle */}
+      <ThemeToggle />
       {/* Background Effects */}
+      <StarBackground />
       {/* Navbar */}
       {/* Main Content */}
       {/* Footer */}
