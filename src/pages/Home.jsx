@@ -1,6 +1,9 @@
 import { StarBackground } from "@components/StarBackground";
 import { ThemeToggle } from "@components/ThemeToggle";
 import { Navbar } from "@components/NavBar";
+import { HeroSection } from "@components/HeroSection";
+import { AboutMe } from "@components/AboutMe";
+import { SkillsSection } from "@components/SkillsSection";
 
 export const Home = () => {
   return (
@@ -12,6 +15,11 @@ export const Home = () => {
       {/* Navbar */}
       <Navbar />
       {/* Main Content */}
+      <main>
+        <HeroSection />
+        <AboutMe />
+        <SkillsSection />
+      </main>
       {/* Footer */}
     </div>
   );
