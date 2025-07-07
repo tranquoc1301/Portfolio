@@ -21,7 +21,7 @@ export const AboutMe = () => {
               Get In Touch
             </a>
             <a
-              href="https://drive.google.com/file/d/1T92jzWG9u-fdCiCxAVnxCHmYGseh6lQQ/view?usp=sharing"
+              href="https://www.canva.com/design/DAGlEBdLi8w/QI_XtWJDvb5N-yfp1cwWow/edit?utm_content=DAGlEBdLi8w&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
               target="_blank"
               className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
             >

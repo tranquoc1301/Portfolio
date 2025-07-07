@@ -2,9 +2,13 @@ import { Mail, MapPin, Phone, Send } from "lucide-react";
 import FacebookIcon from "@assets/icons/facebook.svg";
 import InstagramIcon from "@assets/icons/instargram.svg";
 import LinkedinIcon from "@assets/icons/linkedin.svg";
+
 export const ContactSection = () => {
   return (
-    <section id="contact" className="py-24 px-4 bg-secondary/30">
+    <section
+      id="contact"
+      className="py-24 px-4 bg-secondary/30 animate-fade-in"
+    >
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           Get In <span className="text-primary">Touch</span>
@@ -61,27 +65,27 @@ export const ContactSection = () => {
               </div>
             </div>
             <div className="pt-8">
-              <h4 className="font-medium mb-4">Connect with Me</h4>
-              <div className="flex space-x-4 justify-center">
+              <h4 className="font-medium mb-4 text-center">Connect with Me</h4>
+              <div className="flex space-x-6 justify-center">
                 <a href="">
                   <img
                     src={FacebookIcon}
                     alt="Facebook"
-                    className="w-6 h-6 transition-transform duration-300 hover:scale-110"
+                    className="w-8 h-8 transition-transform duration-300 hover:scale-110 hover:drop-shadow-md"
                   />
                 </a>
                 <a href="">
                   <img
                     src={InstagramIcon}
                     alt="Instagram"
-                    className="w-6 h-6 transition-transform duration-300 hover:scale-110"
+                    className="w-8 h-8 transition-transform duration-300 hover:scale-110 hover:drop-shadow-md"
                   />
                 </a>
                 <a href="">
                   <img
                     src={LinkedinIcon}
                     alt="Linkedin"
-                    className="w-6 h-6 transition-transform duration-300 hover:scale-110"
+                    className="w-8 h-8 transition-transform duration-300 hover:scale-110 hover:drop-shadow-md"
                   />
                 </a>
               </div>
@@ -92,7 +96,7 @@ export const ContactSection = () => {
               Send a Message
             </h3>
 
-            <form action="" className="space-y-6">
+            <form action="" className="space-y-4">
               <div>
                 <label htmlFor="name" className="block mb-2 font-medium">
                   Your Name
@@ -102,7 +106,7 @@ export const ContactSection = () => {
                   id="name"
                   name="name"
                   required
-                  placeholder="Name..."
+                  placeholder="Your Name"
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary transition-colors duration-200"
                 />
               </div>
@@ -115,7 +119,7 @@ export const ContactSection = () => {
                   id="email"
                   name="email"
                   required
-                  placeholder="Email..."
+                  placeholder="Your Email"
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary transition-colors duration-200"
                 />
               </div>
@@ -127,9 +131,8 @@ export const ContactSection = () => {
                   id="message"
                   name="message"
                   required
-                  placeholder="Message..."
-                  rows="6"
-                  cols="50"
+                  placeholder="Your Message"
+                  rows="4"
                   style={{ resize: "none" }}
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary transition-colors duration-200"
                 />
