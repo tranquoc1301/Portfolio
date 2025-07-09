@@ -99,14 +99,17 @@ export const ContactSection = ({ isActive }) => {
               </div>
             </div>
           </div>
-          <div className="bg-card p-8 rounded-lg shadow-xs">
-            <h3 className="text-2xl font-semibold text-primary mb-6">
+          <div className="bg-card p-4 sm:p-6 rounded-xl shadow-sm">
+            <h3 className="text-xl sm:text-2xl font-semibold text-primary mb-4 animate-fade-in">
               Send a Message
             </h3>
 
-            <form action="" className="space-y-4">
-              <div>
-                <label htmlFor="name" className="block mb-2 font-medium">
+            <form action="#submit-form" className="space-y-3">
+              <div className="opacity-0 animate-fade-in-delay-1">
+                <label
+                  htmlFor="name"
+                  className="block mb-1 text-sm sm:text-base font-medium text-foreground"
+                >
                   Your Name
                 </label>
                 <input
@@ -115,11 +118,14 @@ export const ContactSection = ({ isActive }) => {
                   name="name"
                   required
                   placeholder="Your Name"
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary transition-colors duration-200"
+                  className="w-full px-3 py-2 rounded-md border border-input bg-background text-foreground text-sm sm:text-base placeholder-muted-foreground/70 focus:outline-none focus:ring-2 focus:ring-primary focus:scale-[1.01] transition-all duration-200"
                 />
               </div>
-              <div>
-                <label htmlFor="email" className="block mb-2 font-medium">
+              <div className="opacity-0 animate-fade-in-delay-2">
+                <label
+                  htmlFor="email"
+                  className="block mb-1 text-sm sm:text-base font-medium text-foreground"
+                >
                   Your Email
                 </label>
                 <input
@@ -128,11 +134,14 @@ export const ContactSection = ({ isActive }) => {
                   name="email"
                   required
                   placeholder="Your Email"
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary transition-colors duration-200"
+                  className="w-full px-3 py-2 rounded-md border border-input bg-background text-foreground text-sm sm:text-base placeholder-muted-foreground/70 focus:outline-none focus:ring-2 focus:ring-primary focus:scale-[1.01] transition-all duration-200"
                 />
               </div>
-              <div>
-                <label htmlFor="message" className="block mb-2 font-medium">
+              <div className="opacity-0 animate-fade-in-delay-3">
+                <label
+                  htmlFor="message"
+                  className="block mb-1 text-sm sm:text-base font-medium text-foreground"
+                >
                   Your Message
                 </label>
                 <textarea
@@ -142,14 +151,15 @@ export const ContactSection = ({ isActive }) => {
                   placeholder="Your Message"
                   rows="4"
                   style={{ resize: "none" }}
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary transition-colors duration-200"
+                  className="w-full px-3 py-2 rounded-md border border-input bg-background text-foreground text-sm sm:text-base placeholder-muted-foreground/70 focus:outline-none focus:ring-2 focus:ring-primary focus:scale-[1.01] transition-all duration-200"
                 />
               </div>
               <button
                 type="submit"
-                className="cosmic-button bg-primary hover:bg-primary/80 transition-colors duration-200"
+                className="cosmic-button w-full sm:w-auto px-4 py-2 text-sm sm:text-base bg-primary hover:bg-primary/90 hover:shadow-md transition-all duration-200 flex items-center justify-center gap-2 animate-fade-in-delay-4"
+                aria-label="Send message"
               >
-                <Send className="inline-block mr-2" />
+                <Send className="w-4 h-4" />
                 Send Message
               </button>
             </form>
