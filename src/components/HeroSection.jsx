@@ -37,11 +37,10 @@ export const HeroSection = () => {
               Tran
             </span>
             <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2">
-              {" "}
               Quoc
             </span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3">
+          <p className="text-lg text-center md:text-xl text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3">
             I am a year 4 student at Danang University Of Science and Technology
             (DUT), majoring in Computer Science. My future goal is to become a
             fullstack developer.

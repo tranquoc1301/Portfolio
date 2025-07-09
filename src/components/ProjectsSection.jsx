@@ -28,17 +28,25 @@ const projects = [
   },
 ];
 
-export const ProjectsSection = () => {
+export const ProjectsSection = ({ isActive }) => {
   return (
     <section id="projects" className="py-16 px-4 relative overflow-hidden">
       <div className="container mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-3 text-center animate-fade-in">
+        <h2
+          className={`text-3xl md:text-4xl font-bold mb-2 tracking-tight ${
+            isActive ? "text-glow" : ""
+          }`}
+        >
+          {" "}
           My{" "}
           <span className="text-primary bg-clip-text bg-gradient-to-r from-primary to-primary/60">
             Projects
           </span>
         </h2>
-        <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto animate-fade-in-delay-1">
+        {isActive && (
+          <div className="w-20 h-1 bg-gradient-to-r from-primary to-purple-400 mx-auto rounded-full grow-in"></div>
+        )}
+        <p className="text-lg md:text-xl text-center text-muted-foreground mt-4 mb-12 max-w-2xl mx-auto animate-fade-in-delay-1">
           Here are some of my personal projects that I have worked on. Each
           project is a unique opportunity to learn and grow, and I am excited to
           share them with you.

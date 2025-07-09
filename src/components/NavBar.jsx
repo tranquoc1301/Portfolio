@@ -10,7 +10,7 @@ const navItems = [
   { name: "Contact", href: "#contact", icon: Mail },
 ];
 
-export const Navbar = () => {
+export const Navbar = ({ onSectionChange }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeItem, setActiveItem] = useState("#hero");
@@ -32,10 +32,10 @@ export const Navbar = () => {
         return false;
       });
 
-      if (currentSection) {
-        setActiveItem(currentSection.href);
-      } else if (window.scrollY < 100) {
-        setActiveItem("#hero");
+      const newActiveItem = currentSection ? currentSection.href : "#hero";
+      if (newActiveItem !== activeItem) {
+        setActiveItem(newActiveItem);
+        onSectionChange?.(newActiveItem); // Notify parent of active section
       }
     };
 
@@ -43,7 +43,7 @@ export const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [activeItem, onSectionChange]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -71,6 +71,7 @@ export const Navbar = () => {
   const handleNavClick = (href) => {
     setIsMenuOpen(false);
     setActiveItem(href);
+    onSectionChange?.(href); // Notify parent on click
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });

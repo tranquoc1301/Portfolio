@@ -63,7 +63,7 @@ const categories = [
   { name: "Languages", icon: Languages },
 ];
 
-export const SkillsSection = () => {
+export const SkillsSection = ({ isActive }) => {
   const [activeCategory, setActiveCategory] = useState("All");
   const [theme, setTheme] = useState(
     document.documentElement.classList.contains("dark") ? "dark" : "light"
@@ -133,14 +133,22 @@ export const SkillsSection = () => {
       className="py-20 px-2 sm:px-4 bg-gradient-to-b from-secondary/20 to-secondary/40"
     >
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center tracking-tight">
+        <h2
+          className={`text-3xl md:text-4xl font-bold mb-2 tracking-tight ${
+            isActive ? "text-glow" : ""
+          }`}
+        >
+          {" "}
           My{" "}
           <span className="text-primary bg-clip-text bg-gradient-to-r from-primary to-primary/60">
             Skills
           </span>
         </h2>
+        {isActive && (
+          <div className="w-20 h-1 bg-gradient-to-r from-primary to-purple-400 mx-auto rounded-full grow-in"></div>
+        )}
 
-        <div className="flex flex-wrap justify-center gap-4 mb-10">
+        <div className="flex flex-wrap justify-center gap-4 mt-6 mb-10">
           {categories.map((category) => {
             const Icon = category.icon;
             return (
